@@ -6,6 +6,9 @@ import {configureStore, history} from "./store/reducers/store";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Layout from "./containers/Layout/Layout";
+import Home from "./containers/Home/Home";
+import TripPage from "./containers/TripPage/TripPage";
+import Notes from "./containers/Notes/Notes";
 
 import App from './App';
 
@@ -16,8 +19,10 @@ ReactDOM.render((
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route exact path='/' component={App} />
-                    {/*<Route path='*' component={Error} />*/}
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/tripPage' component={TripPage} />
+                    <Route exact path='/notes' component={Notes} />
+                    <Route path='*' component={Home} />
                 </Switch>
             </Layout>
         </BrowserRouter>

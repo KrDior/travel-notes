@@ -5,6 +5,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Home from "../../containers/Home/Home";
+import TripPage from "../../containers/TripPage/TripPage";
+import Notes from "../../containers/Notes/Notes";
+
 import { NavLink } from 'react-router-dom';
 
 interface TabPanelProps {
@@ -78,12 +82,12 @@ export default function MainNavigationMenu() {
                     onChange={handleChange}
                     aria-label="nav tabs example"
                 >
-                    <LinkTab label="Page One" href="/drafts" {...a11yProps(0)} />
-                    <LinkTab label="Page Two" href="/trash" {...a11yProps(1)} />
-                    <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
+                    <LinkTab label="Page One" href="/" {...a11yProps(0)} />
+                    <LinkTab label="Page Two" href="/tripPage" {...a11yProps(1)} />
+                    <LinkTab label="Page Three" href="/notes" {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={value} index={0} >
                 <NavLink exact to='/'>Home</NavLink>
                 Page One
             </TabPanel>
