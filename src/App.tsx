@@ -1,12 +1,21 @@
-import * as React from "react";
-import { Route, Switch } from "react-router-dom";
-import Calculator from './containers'
+import React from 'react';
+import { Router } from "react-router-dom";
+import { History } from 'history';
+import routes from './routes';
+import Layout from "./containers/Layout/Layout";
 
-export const App = (): JSX.Element => {
+interface AppProps {
+  history: History;
+}
+
+const App = ({ history }: AppProps) => {
   return (
-    <div>
-      <Route exact={true} path="/" component={Calculator} />
-    </div>
-  );
+    <Router  history={history}>
+        <Layout>
+            { routes }
+        </Layout>
+    </Router  >
+  )
 };
+
 export default App;

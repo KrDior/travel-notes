@@ -1,4 +1,7 @@
 import * as React from 'react';
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import CommuteIcon from '@material-ui/icons/Commute';
+import AppsIcon from '@material-ui/icons/Apps';
 
 interface IProps {
   countBy?: number;

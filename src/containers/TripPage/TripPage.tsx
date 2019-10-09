@@ -3,7 +3,7 @@ import * as React from "react";
 interface Props {
 }
 
-export class TripPage extends React.Component<Props> {
+export default class TripPage extends React.Component<Props> {
     render(){
         return (
             <div >
@@ -12,5 +12,3 @@ export class TripPage extends React.Component<Props> {
         );
     }
 }
-
-export default TripPage;
