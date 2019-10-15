@@ -1,13 +1,10 @@
-import { combineReducers } from "redux";
-import { routerReducer as router, RouterState } from "react-router-redux";
+import { combineReducers } from 'redux';
+import { routerReducer as router, RouterState } from 'react-router-redux';
 
-import {
-  calculatorReducer,
-  State as CalculatorState
-} from "./calculatorReducer";
-import { CalculatorModel } from "../../interfaces/calculatorModels";
+import { calculatorReducer, State as CalculatorState } from './calculatorReducer';
+import { CalculatorModel } from '../../interfaces/calculatorModels';
 
-interface StoreEnhancerState {}
+type StoreEnhancerState = {};
 
 export interface RootState extends StoreEnhancerState {
   router: RouterState;
@@ -15,5 +12,5 @@ export interface RootState extends StoreEnhancerState {
 }
 export const rootReducer = combineReducers<RootState>({
   router,
-  calculatorReducer: calculatorReducer as any
+  calculatorReducer: calculatorReducer as any,
 });

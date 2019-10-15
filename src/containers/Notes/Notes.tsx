@@ -1,14 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-interface Props {
-}
+type Props = {};
+type State = {};
 
-export default class Notes extends React.Component<Props> {
-    render(){
-        return (
-            <div >
-                Notes Container!
-            </div>
-        );
-    }
+export default class Notes extends React.Component<Props, State> {
+  render() {
+    return <div>Notes Container!</div>;
+  }
 }

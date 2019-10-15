@@ -1,14 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-interface Props {
-}
+type Props = {};
+type State = {};
 
-export default class TripPage extends React.Component<Props> {
-    render(){
-        return (
-            <div >
-                TripPage Container!
-            </div>
-        );
-    }
+export default class TripPage extends React.Component<Props, State> {
+  render() {
+    return <div>TripPage Container!</div>;
+  }
 }

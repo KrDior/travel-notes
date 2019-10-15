@@ -1,19 +1,18 @@
-import * as React from "react";
+import * as React from 'react';
 import './Layout.less';
 import Container from '@material-ui/core/Container';
+import { RunBot } from '../../components';
 
-interface Props {
-}
+type Props = {};
+type State = {};
 
-export class Layout extends React.Component<Props> {
+export default class Layout extends React.Component<Props, State> {
   render() {
-      return (
-          <React.Fragment>
-                  <Container className={'layout-body'}>
-                      {this.props.children}
-                  </Container>
-          </React.Fragment>
-      )
+    return (
+      <React.Fragment>
+        <Container className={'layout-body'}>{this.props.children}</Container>
+        <RunBot />
+      </React.Fragment>
+    );
   }
 }
-export default Layout;

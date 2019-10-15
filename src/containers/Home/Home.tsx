@@ -1,14 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-interface Props {
-}
+type Props = {};
+type State = {};
 
-export default class Home extends React.Component<Props> {
-    render(){
-        return (
-            <div >
-                Home Container!
-            </div>
-        );
-    }
+export default class Home extends React.Component<Props, State> {
+  render() {
+    return <div>Home Container!</div>;
+  }
 }
